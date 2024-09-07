@@ -3,5 +3,6 @@
   "hello": "你好",
   "header.aboutUs": "关于我们",
   "header.contactUs": "联系我们",
-  "header.language": "English"
+  "header.language": "English",
+  "header.products": "产品介绍"
 }

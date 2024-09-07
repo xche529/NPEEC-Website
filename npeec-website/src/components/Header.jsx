@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
+import HeaderButton from "./HeaderButton";
 
 function Header() {
   const { t, i18n } = useTranslation();
@@ -15,16 +16,26 @@ function Header() {
     i18n.changeLanguage(lang);
   };
 
+  const handleAboutClick = () => {
+    console.log("About clicked");
+  };
+
+  const handleContactClick = () => {
+    console.log("Contact clicked");
+  };
+
+  const handleProductClick = () => {
+    console.log("Product clicked");
+  };
+
   return (
-    <header className="p-4 bg-gray-200 flex" data-testid="header">
-      <div className="flex space-x-4 items-center mt-4 lg:mt-0">
-        <h1 className="font-bold text-3xl lg:text-5xl">NPEEC</h1>
-        <button className="m-{5px}">{t("header.aboutUs")}</button>
-        <button>{t("header.contactUs")}</button>
-        <button onClick={() => handleLanguageChange()}>
-          {t("header.language")}
-        </button>
-      </div>
+    <header className="h-20 bg-gray-200  flex items-center">
+      <h1 className="m-8 font-bold text-3xl lg:text-5xl ">NPEEC</h1>
+      <HeaderButton text="header.products" onClick={handleProductClick} />
+      <HeaderButton text="header.aboutUs" onClick={handleAboutClick} />
+      <HeaderButton text="header.contactUs" onClick={handleContactClick} />
+      <div className="ml-auto"></div>
+      <HeaderButton text="header.language" onClick={handleLanguageChange} />
     </header>
   );
 }

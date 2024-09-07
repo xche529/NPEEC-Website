@@ -3,5 +3,7 @@
   "hello": "Hello",
   "header.aboutUs": "About Us",
   "header.contactUs": "Contact Us",
-  "header.language": "中文"
+  "header.language": "中文",
+  "header.products": "Our Products"
+
 }
